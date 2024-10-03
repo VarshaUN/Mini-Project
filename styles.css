@@ -1,0 +1,297 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+     background: url("https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQXcoHmuzMT3ReCo1jv9XwmyefEHxIxlFTemK1VIO1lHAhX3HG-KkM4pxfd-8_rlH3broL6x-GqpGycA0c6bdXjrwAHi2C3ORHLBVBydA");
+     background-size: cover;
+     height:100vh;
+}
+
+/* Header Styles */
+header {
+   
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    
+    
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: black;
+}
+
+nav ul ul {
+    position: absolute;
+    background-color: #333;
+    padding: 0.5em;
+    display: none;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+/* Hero Styles */
+.hero {
+    
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+    padding:10px;
+    color:black;
+}
+
+#main{
+    height:100vh;
+    width:100%;
+    
+   
+}
+
+.hero h1 {
+    font-size: 6em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:#F7DBA0;
+    
+}
+
+h2{
+    font-size: 30px;
+    color:whitesmoke;
+    
+   
+}
+
+
+  #nextmain{
+    font-size: 50px;
+    color:#703336;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  animation: moveText 10s linear infinite;
+  position: relative;
+
+
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+
+
+.boxed-text{
+    border:2px solid black;
+    display:inline-block;
+    padding:2px 2px ;
+    background-color: #D89EA0;
+
+    border-radius: 20px;
+    
+}
+
+
+/* Destination Cards Styles */
+.destinations {
+    padding: 2em;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.card {
+    background-color: gainsboro;
+    border: 1px solid #ddd;
+    margin: 1em;
+    padding: 1em;
+    width: calc(33.33% - 2em);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.card h3 {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.main_box{
+    
+    text-align: start;
+}
+
+.btn_one i{
+    color:white;
+    font-size: 30px;
+    font-weight: 700;
+    position:absolute;
+    left:16px;
+    line-height: 60px;
+    transition: all 0.3s linear;
+}
+
+
+.sidebar_menu{
+    position: fixed;
+    left:-300px;
+   height:100vh;
+   width:300px;
+   background-color: rgb(156, 225, 122);
+   box-shadow:0 0 6px grey;
+}
+
+.sidebar_menu  .logo{
+    position:absolute;
+    width:100%;
+    line-height: 60px;
+    box-shadow: 0 0 4px red;
+}
+
+.sidebar_menu .logo a {
+    position:absolute;
+    left:50px;
+    color:white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.sidebar_menu .btn_two i{
+    color:blueviolet;
+    font-size: 25px;
+    line-height: 60px;
+    position: center;
+    left: 275px;
+    cursor:pointer;
+    opacity:0;
+    transition: all 0.3s linear;
+
+}
+
+.sidebar_menu .menu{
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    transition: all 0.3s linear;
+}
+
+.sidebar_menu  .menu li{
+   padding-top: 30px 30px;
+   margin-top: 20px;
+}
+
+.sidebar_menu .menu i,a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.sidebar_menu .menu i {
+    padding-right:8px;
+}
+
+.sidebar_menu .social_media{
+    color:white;
+    position:absolute;
+    left:25%;
+    bottom:50px;
+
+}
+
+.sidebar_menu .social_media i{
+    padding:2px;
+}
+
+#check{
+    display: none;
+}
+
+.sidebar_menu .menu li:hover{
+    box-shadow: white;
+}
+
+.btn_one:hover{
+    font-size: 40px;
+}
+
+.btn_two:hover{
+    font-size: 30px;
+}
+
+.sidebar_menu .social_media i:hover{
+   transform: scale(1);
+}
+
+#check:checked ~ .btn_one i{
+    opacity: 0;
+}
+
+#check:checked ~ .sidebar_menu .btn_two i{
+    opacity: 1;
+}
+
+#check:checked ~ .sidebar_menu {
+  left: 0; /* Move into view when checked */
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .card {
+        width: calc(50% - 2em);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+}
